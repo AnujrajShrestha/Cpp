@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <math.h>
 using namespace std;
 
 // int main(){
@@ -77,14 +78,48 @@ using namespace std;
 //     return 0; 
 // }
 
+// int main(){
+//     int a,b,temp=0;
+//     cout << "Enter any two numbers: ";
+//     cin >> a >> b;
+//     // temp= a;
+//     // a=b;
+//     // b=temp;
+//     a=a^b^(b=a);
+//     cout << "a = " << a << ",b = " << b << '\n';
+//     return 0;
+// }
+
+// int main(){
+//     int radius;
+//     double pi= numbers::pi;
+//     cout << "Enter the radius of cricle: ";
+//     cin >> radius;
+//     double area= pi * (double)radius *(double)radius;
+//     cout << "The area of circle is: " << area <<'\n';
+//     return 0;
+// }
+
+// int main(){
+//     int celsius;
+//     double fahrenheit=0;
+//     cout << "Enter celsius: ";
+//     cin >> celsius;
+//     fahrenheit= ((double)celsius * 9/5) + 32;
+//     cout << "The fahrenhiet of " << celsius << " celsius is " << fahrenheit << " fahrenheit" <<'\n';
+// }
+
+// int main(){
+//     int salary;
+//     cout << "Enter your salary: ";
+//     cin >> salary;
+//     salary+= 5000;
+//     cout << "Your salary is increased by 5000: " << salary << '\n';
+// }
+
 int main(){
-    int a,b,temp=0;
-    cout << "Enter any two numbers: ";
-    cin >> a >> b;
-    // temp= a;
-    // a=b;
-    // b=temp;
-    a=a^b^(b=a);
-    cout << "a = " << a << ",b = " << b << '\n';
-    return 0;
+    char a;
+    cout << "Enter a character: ";
+    cin >> a;
+    cout << "The ASCII value of " << a << " is " << (int)a << '\n';
 }
