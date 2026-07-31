@@ -78,9 +78,12 @@ using namespace std;
 // }
 
 int main(){
-    int a,b;
+    int a,b,temp=0;
     cout << "Enter any two numbers: ";
     cin >> a >> b;
+    // temp= a;
+    // a=b;
+    // b=temp;
     a=a^b^(b=a);
     cout << "a = " << a << ",b = " << b << '\n';
     return 0;
