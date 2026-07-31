@@ -117,9 +117,134 @@ using namespace std;
 //     cout << "Your salary is increased by 5000: " << salary << '\n';
 // }
 
+// int main(){
+//     char a;
+//     cout << "Enter a character: ";
+//     cin >> a;
+//     cout << "The ASCII value of " << a << " is " << (int)a << '\n';
+// }
+
+// int main(){
+//     int a,b;
+//     cout << "Enter any two number: ";
+//     cin >> a >> b;
+//     if (a>b){
+//         cout << a << " is the greatest one";
+//     }else{
+//         cout << b << " is the greatest one";
+        
+//     }
+// return 0;
+// }
+
+// int main(){
+//     int a;
+//     cout << "Enter a number: ";
+//     cin >> a;
+//     if (a%2==0){
+//         cout << "Even";
+//     }else{
+//         cout << "odd";
+//     }
+//     return 0;
+// }
+
+
+// int main(){
+//     int num;
+//     cout << "Enter a number: ";
+//     cin >> num;
+//     if (num > 0){
+//         cout  << "Positive" << '\n';
+//     }else if(num < 0){
+//         cout << "Negative" << '\n';
+//     }else{
+//         cout << "Zero" << '\n';
+//     }
+//     return 0;
+// }
+
+// int main(){
+//     int num;
+//     cout << "Enter a number: ";
+//     cin >> num;
+//     if (num % 100 == 0){
+//         if (num % 4 == 0){
+//             cout << "Lead year.\n";
+//         }else{
+//             cout << "Not a leap year.\n";
+//         }
+//     }else{
+//         if (num % 4 == 0){
+//             cout << "Leap year.\n";
+//         }else{
+//             cout << "Not a leap year.\n";
+//         }
+//     }
+//     return 0;
+// }
+
+// int main(){
+//     int amount=0,discount=0;
+//     cout << "Enter your billing amount: ";
+//     cin >> amount;
+//     if (amount <= 5000){
+//         discount= 0;
+//     }else if(amount > 5000 && amount <= 7000){
+//         discount= 5;
+//     }else if(amount > 7000 && amount <= 9000){
+//         discount= 10;
+//     }else if (amount > 9000){
+//         discount= 20;
+//     }
+//     amount-= (amount/100)*discount;
+//     cout << "Discount grandted: " << discount << '%' << '\n';
+//     cout << "Your billing amount is " << amount << '\n';
+//     return 0;
+// }
+
+// int main(){
+//     char ch;
+//     cout << "Enter a character: ";
+//     cin >> ch;
+//     switch (ch){
+//         case 'a':
+//         case 'A':
+//         case 'e':
+//         case 'E':
+//         case 'i':
+//         case 'I':
+//         case 'o':
+//         case 'O':
+//         case 'u':
+//         case 'U':
+//             cout << "Vowel";
+//             break;
+//         default:
+//             cout << "Consonant";
+//     }
+//     return 0;
+// }
+
 int main(){
-    char a;
-    cout << "Enter a character: ";
-    cin >> a;
-    cout << "The ASCII value of " << a << " is " << (int)a << '\n';
+    int units;
+    double bill=0;
+    cout << "Enter your electricity unit: ";
+    cin >> units;
+    if (units > 400){
+        bill +=(units -400)*13;
+        units= 400;
+    }
+    if (units > 200 && units <= 400){
+        bill += (units - 200)*8;
+        units= 200;
+    }
+    if (units > 100 && units <= 200){
+        bill += (units=100)*6;
+        units= 100;
+    }
+    bill+ units*4.2;
+    
+    cout << "Total amount: " << bill << '\n';
+    return 0;
 }
