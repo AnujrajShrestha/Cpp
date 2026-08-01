@@ -226,25 +226,154 @@ using namespace std;
 //     return 0;
 // }
 
-int main(){
-    int units;
-    double bill=0;
-    cout << "Enter your electricity unit: ";
-    cin >> units;
-    if (units > 400){
-        bill +=(units -400)*13;
-        units= 400;
-    }
-    if (units > 200 && units <= 400){
-        bill += (units - 200)*8;
-        units= 200;
-    }
-    if (units > 100 && units <= 200){
-        bill += (units=100)*6;
-        units= 100;
-    }
-    bill+ units*4.2;
+// int main(){
+//     int units;
+//     double bill=0;
+//     cout << "Enter your electricity unit: ";
+//     cin >> units;
+//     if (units > 400){
+//         bill +=(units -400)*13;
+//         units= 400;
+//     }
+//     if (units > 200 && units <= 400){
+//         bill += (units - 200)*8;
+//         units= 200;
+//     }
+//     if (units > 100 && units <= 200){
+//         bill += (units=100)*6;
+//         units= 100;
+//     }
+//     bill+ units*4.2;
     
-    cout << "Total amount: " << bill << '\n';
-    return 0;
-}
+//     cout << "Total amount: " << bill << '\n';
+//     return 0;
+// }
+
+// int main(){
+//     int day;
+//     cout << "Enter a number: ";
+//     cin >> day;
+//     switch(day){
+//         case 1:
+//             cout << "Snuday";
+//             break;
+
+//         case 2:
+//             cout << "Monday";
+//             break;
+
+//         case 3:
+//             cout << "Tuesday";
+//             break;
+
+//         case 4:
+//             cout << "Wednesday";
+//             break;
+
+//         case 5:
+//             cout << "Thursday";
+//             break;
+
+//         case 6:
+//             cout << "Friday";
+//             break;
+
+//         case 7:
+//             cout << "Saturda";
+//             break;
+
+//         default:
+//            cout << "Invalid choice";
+//     }
+//     return 0;
+// }
+
+
+// int main(){
+//     char ch;
+//     cout << "Enter a character: ";
+//     cin >> ch;
+//     if ((int)ch>=65 && (int)ch <=90){
+//         cout << "Upper case";
+//     }else if((int)ch>=97 && (int)ch <=122){
+//         cout << "Lower case";
+//     }else{
+//         cout << "Not an alphabet";
+//     }
+//     return 0;
+// }
+
+// int main(){
+//     int n;
+//     cout << "Enter anumber: ";
+//     cin >> n;
+//     for (int i=0;i<=n;i++){
+//         cout << "Hello world\n";
+//     }
+//     return 0;
+// }
+
+// int main(){
+//     int n;
+//     cout << "Enter a number: ";
+//     cin >> n;
+//     for (int i=n;i>=1;i--){
+//         cout << i << '\n';
+//     }
+//     return 0;
+// }
+
+// int main(){
+//     int n,sum=0;
+//     cout << "Enter a number: ";
+//     cin >> n;
+//     for(int i=1;i<=n;i++){
+//         sum+=i;
+//     }
+//     cout << sum;
+//     return 0;
+// }
+
+// int main(){
+//     int n,fact=1;
+//     cout << "Enter a number: ";
+//     cin >> n;
+//     for (int i=1;i<=n;i++){
+//         fact*=i;
+//     } 
+//     cout << fact;
+//     return 0;
+// }
+
+// int main(){
+//     int n;
+//     cout << "Enter a number: ";
+//     cin >> n;
+//     for (int i=1;i<=n;i++){
+//         if(n%i==0){
+//             cout << i <<'\n';
+//         }
+//     }
+//     return 0;
+// }
+
+// int main(){
+//     int n,prime=0;
+//     cout << "Enter anumber: ";
+//     cin >> n;
+//     if(n>0){
+//         for(int i=1;i<=n;i++){
+//             if(n%i==0){
+//                 prime++;
+//             }
+//         }
+//         if(prime==2){
+//             cout << "Prime";
+//         }else{
+//             cout << "Composite";
+//         }
+//     }else{
+//         cout << "Enter number greater than 0";
+//     }
+//     return 0;
+// }
