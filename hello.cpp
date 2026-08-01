@@ -377,3 +377,64 @@ using namespace std;
 //     }
 //     return 0;
 // }
+
+// int main(){
+//     int n,sum=0,i=0;
+//     cout << "Enter a number: ";
+//     cin >> n;
+//     while(n!=i){
+//         i++;
+//         sum+=i;
+//     }
+//     cout << sum;
+//     return 0;
+// }
+
+// int main(){
+//     int n,mod=0,rev=0;
+//     cout << "Enter a number: ";
+//     cin >> n;
+//     while(n!=0){
+//         mod= n%10;
+//         rev*= rev*10+mod;
+//         n/=10; 
+//     }
+//     cout << rev;
+//     return 0;
+// }
+
+// int main(){
+//     int n,temp=0,mod=0,rev=0;
+//     cout << "Enter anumber: ";
+//     cin >> n;
+//     temp=n;
+//     while(temp!=0){
+//         mod= temp%10;
+//         rev= rev*10+mod;
+//         temp/=10;
+//     }
+//     if (n==rev){
+//         cout << "The number is palindrome";
+//     }else{
+//         cout << "The number is not palindrome";
+//     }
+//     return 0;
+// }
+
+// int main(){
+//     int n,temp=0,mod=0,arm=0;
+//     cout << "Enter a number: ";
+//     cin >> n;
+//     temp= n;
+//     while(temp!=0){
+//         mod= temp%10;
+//         arm+=mod*mod*mod;
+//         temp/=10;
+//     }
+//     if(n==arm){
+//         cout << "The number is armstrong";
+//     }else{
+//         cout << "The number is not armstrong";
+//     }
+//     return 0;
+// }
