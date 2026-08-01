@@ -453,17 +453,47 @@ using namespace std;
 //     return 0;
 // }
 
+// int main(){
+//     int n=5;
+//     for(int i=1;i<=n;i++){
+//         for(int j=1;j<2*n;j++){
+//             if((i==j) || (i+j==2*n)){
+//             cout << "*";
+//         }else{
+//             cout << " ";
+//         }
+//     }
+//     cout << "\n";
+// }
+// return 0;
+// }
+
+// //functon declaration
+// int sum(int a,int b);
+
+// //function definition
+// int sum(int a,int b){
+//     return a+b;
+// }
+
+// int main(){
+//     cout << sum(5,6); //function call
+//     return 0;
+// }
+
+void swap(int &a, int &b);
+
 int main(){
-    int n=5;
-    for(int i=1;i<=n;i++){
-        for(int j=1;j<2*n;j++){
-            if((i==j) || (i+j==2*n)){
-            cout << "*";
-        }else{
-            cout << " ";
-        }
-    }
-    cout << "\n";
+    int a,b;
+    cout << "Enter any two numbers: ";
+    cin >> a >> b;
+    swap(a,b);
+    cout << "a = " << a << " b = " << b;
+    return 0;
 }
-return 0;
+
+void swap(int &a,int &b){
+    int temp=a;
+    a=b;
+    b=temp;
 }
