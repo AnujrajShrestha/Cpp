@@ -14,7 +14,7 @@ int main(){
             cout << "Think a lower number\n";
             attemps++;
         }else if(n< random){
-            cout << "This a hihger number\n";
+            cout << "Think a hihger number\n";
             attemps++;
         }else{
             cout << "You guessed the number: " << random << '\n';
