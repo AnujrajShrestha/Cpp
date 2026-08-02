@@ -58,31 +58,58 @@ using namespace std;
 //     return 0;
 // }
 
-int main(){
-    int n;
-    cout << "Enter the size of array: ";
-    cin >> n;
-    int arr[n];
-    cout << "Enter " << n << " elements of an array: \n";
-    for(int i=0;i<n;i++){
-        cin >> arr[i];
-    }
-    cout << "Elements: ";
-    for(int i=0;i<n;i++){
-        cout << arr[i] << '\t';
-    }
+// int main(){
+//     int n;
+//     cout << "Enter the size of array: ";
+//     cin >> n;
+//     int arr[n];
+//     cout << "Enter " << n << " elements of an array: \n";
+//     for(int i=0;i<n;i++){
+//         cin >> arr[i];
+//     }
+//     cout << "Elements: ";
+//     for(int i=0;i<n;i++){
+//         cout << arr[i] << '\t';
+//     }
     
-    for(int i=0;i<n;i++){
-        for(int j=i+1;j<n;j++){
-            if(arr[i]<arr[j]){
-                arr[i]=arr[i]^arr[j]^(arr[j]=arr[i]);
-            }
-        }
-    }
+//     for(int i=0;i<n;i++){
+//         for(int j=i+1;j<n;j++){
+//             if(arr[i]<arr[j]){
+//                 arr[i]=arr[i]^arr[j]^(arr[j]=arr[i]);
+//             }
+//         }
+//     }
 
-    cout << "\nSorted array: ";
-    for(int i=0;i<n;i++){
-        cout << arr[i] << '\t';
+//     cout << "\nSorted array: ";
+//     for(int i=0;i<n;i++){
+//         cout << arr[i] << '\t';
+//     }
+//     return 0;
+// }
+
+// int main(){
+//     int n=10;
+//     int arr[n]= {1,2,3,4,5,6,7,8,9,10};
+//     for(int i=0;i<n/2;i++){
+//        arr[i]=arr[i]^arr[n-i-1]^(arr[n-i-1]=arr[i]);
+//     }
+//     for(int i=0;i<n;i++){
+//         cout << arr[i] << '\n';
+//     }
+//     return 0;
+// }
+
+int main(){
+    int n=5;
+    int arr[n]={1,2,3,4,5};
+    for(int k=0;k<2;k++){
+        int temp= arr[0];
+        for(int i=1;i<n;i++){
+         arr[i-1]= arr[i];
     }
-    return 0;
+    arr[n-1]= temp;
+    }
+    for(int i=0;i<5;i++){
+        cout << arr[i] << " ";
+    }
 }
