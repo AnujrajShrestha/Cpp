@@ -99,17 +99,35 @@ using namespace std;
 //     return 0;
 // }
 
+// int main(){
+//     int n=5;
+//     int arr[n]={1,2,3,4,5};
+//     for(int k=0;k<2;k++){
+//         int temp= arr[0];
+//         for(int i=1;i<n;i++){
+//          arr[i-1]= arr[i];
+//     }
+//     arr[n-1]= temp;
+//     }
+//     for(int i=0;i<5;i++){
+//         cout << arr[i] << " ";
+//     }
+// }
+
 int main(){
-    int n=5;
-    int arr[n]={1,2,3,4,5};
-    for(int k=0;k<2;k++){
-        int temp= arr[0];
-        for(int i=1;i<n;i++){
-         arr[i-1]= arr[i];
-    }
-    arr[n-1]= temp;
-    }
+    int arr[5]={1,2,3,2,1};
+    int sum=0,c=0;
+    int target= 3;
     for(int i=0;i<5;i++){
-        cout << arr[i] << " ";
+        sum=0;
+        for(int j=i;j<5;j++){
+            sum+= arr[j];
+            if(sum== target){
+                c++;
+            }
+        }
     }
+
+    cout << c ;
+    return 0;
 }
