@@ -148,23 +148,69 @@ using namespace std;
 // }
 
 //binary search
+// int main(){
+//     int n=6;
+//     int arr[6]= {12,56,89,99,100,102};
+//     int ans= -1;
+//     int target= 100;
+//     int s=0,e=n-1;
+//     while( s<= e){
+//         int mid= (s+e)/2;
+//         if(arr[mid]== target){
+//             ans= mid;
+//             break;
+//         }else if(arr[mid] < target){
+//             s= mid+1;
+//         }else{
+//             e= mid-1;
+//         }
+//     }
+//     cout << ans;
+//     return 0;
+// }
+
+// int main(){
+//     int arr[3][3];
+//     cout << "Enter any 9 elements in 3x3 matrix: \n"; 
+//     for(int i=0;i<3;i++){
+//         for(int j=0;j<3;j++){
+//             cin >> arr[i][j];
+//         }
+//         cout << '\n';
+//     }
+//     cout << "\nElements: \n";
+//     for(int i=0;i<3;i++){
+//         for(int j=0;j<3;j++){
+//             cout << arr[i][j] << " ";
+//         }
+//         cout << '\n';
+//     }
+//     return 0;
+// }
+
 int main(){
-    int n=6;
-    int arr[6]= {12,56,89,99,100,102};
-    int ans= -1;
-    int target= 100;
-    int s=0,e=n-1;
-    while( s<= e){
-        int mid= (s+e)/2;
-        if(arr[mid]== target){
-            ans= mid;
-            break;
-        }else if(arr[mid] < target){
-            s= mid+1;
-        }else{
-            e= mid-1;
+    int rows,cols;
+    cout << "Enter the number of rows: ";
+    cin >> rows;
+    cout << "Enter the number of columns: ";
+    cin >> cols;
+    
+    int arr[rows][cols];
+    cout << "Enter " << rows << "x" << cols << "elements: \n";
+    for(int i=0;i<rows;i++){
+        for(int j=0;j<cols;j++){
+            cout << "Position " << "[" << i+1 << "][" << j+1 <<"]" << ": ";
+            cin >> arr[i][j];
         }
+        cout << "\n";
+    } 
+    
+    cout << "\nElements: \n";
+    for(int i=0;i<rows;i++){
+        for(int j=0;j<cols;j++){
+            cout << arr[i][j] << " ";
+        }
+        cout << "\n";
     }
-    cout << ans;
     return 0;
 }
