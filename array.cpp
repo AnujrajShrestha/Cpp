@@ -114,20 +114,57 @@ using namespace std;
 //     }
 // }
 
+// int main(){
+//     int arr[5]={1,2,3,2,1};
+//     int sum=0,c=0;
+//     int target= 3;
+//     for(int i=0;i<5;i++){
+//         sum=0;
+//         for(int j=i;j<5;j++){
+//             sum+= arr[j];
+//             if(sum== target){
+//                 c++;
+//             }
+//         }
+//     }
+
+//     cout << c ;
+//     return 0;
+// }
+
+//linear search
+// int main(){
+//     int arr[5]={1,2,3,4,5};
+//     int target=3;
+//     int ans= -1;
+//     for(int i=0;i<5;i++){
+//         if(arr[i]==target){
+//             ans= i;
+//             break;
+//         }
+//     }
+//     cout << ans;
+//     return 0;
+// }
+
+//binary search
 int main(){
-    int arr[5]={1,2,3,2,1};
-    int sum=0,c=0;
-    int target= 3;
-    for(int i=0;i<5;i++){
-        sum=0;
-        for(int j=i;j<5;j++){
-            sum+= arr[j];
-            if(sum== target){
-                c++;
-            }
+    int n=6;
+    int arr[6]= {12,56,89,99,100,102};
+    int ans= -1;
+    int target= 100;
+    int s=0,e=n-1;
+    while( s<= e){
+        int mid= (s+e)/2;
+        if(arr[mid]== target){
+            ans= mid;
+            break;
+        }else if(arr[mid] < target){
+            s= mid+1;
+        }else{
+            e= mid-1;
         }
     }
-
-    cout << c ;
+    cout << ans;
     return 0;
 }
