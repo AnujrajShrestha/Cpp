@@ -188,6 +188,33 @@ using namespace std;
 //     return 0;
 // }
 
+// int main(){
+//     int rows,cols;
+//     cout << "Enter the number of rows: ";
+//     cin >> rows;
+//     cout << "Enter the number of columns: ";
+//     cin >> cols;
+    
+//     int arr[rows][cols];
+//     cout << "Enter " << rows << "x" << cols << " elements: \n";
+//     for(int i=0;i<rows;i++){
+//         for(int j=0;j<cols;j++){
+//             cout << "Position " << "[" << i+1 << "][" << j+1 <<"]" << ": ";
+//             cin >> arr[i][j];
+//         }
+//         cout << "\n";
+//     } 
+    
+//     cout << "\nElements: \n";
+//     for(int i=0;i<rows;i++){
+//         for(int j=0;j<cols;j++){
+//             cout << arr[i][j] << " ";
+//         }
+//         cout << "\n";
+//     }
+//     return 0;
+// }
+
 int main(){
     int rows,cols;
     cout << "Enter the number of rows: ";
@@ -196,7 +223,7 @@ int main(){
     cin >> cols;
     
     int arr[rows][cols];
-    cout << "Enter " << rows << "x" << cols << "elements: \n";
+     cout << "Enter " << rows << "x" << cols << " elements: \n";
     for(int i=0;i<rows;i++){
         for(int j=0;j<cols;j++){
             cout << "Position " << "[" << i+1 << "][" << j+1 <<"]" << ": ";
@@ -204,13 +231,16 @@ int main(){
         }
         cout << "\n";
     } 
-    
-    cout << "\nElements: \n";
+
+    int sum=0;
     for(int i=0;i<rows;i++){
         for(int j=0;j<cols;j++){
-            cout << arr[i][j] << " ";
+            if(i==j || i+j== rows-1 ){
+                sum+=arr[i][j];
+            }
         }
-        cout << "\n";
     }
+    cout << "Digonal: " << sum << '\n';
     return 0;
+
 }
