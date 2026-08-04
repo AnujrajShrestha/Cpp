@@ -34,8 +34,27 @@ using namespace std;
 
 // }
 
+// int main(){
+//     char str[10]="hello",str2[20]=" how are you";
+//     cout << strcmp(str2,str) << '\n';
+//     return 0;
+// }
+
+// int main(){
+//     char str[10]="hello";
+//     char str2[10]="hi";
+//     strcpy(str,str2);
+//     cout << str;
+//     return 0;
+// }
+
 int main(){
-    char str[10]="hello",str2[20]=" how are you";
-    cout << strcmp(str2,str) << '\n';
-    return 0;
+    string str;
+    cout << "Enter a string: ";
+    getline(cin ,str);
+    for(int i=0;i<str.length();i++){
+        cout << str[i] << '\n';
+    }
+
+    
 }
