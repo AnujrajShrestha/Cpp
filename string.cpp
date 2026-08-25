@@ -62,11 +62,47 @@ struct students{
     int age;
 };
 
-int main(){
-    students s1;
-    s1.name= "Anuj";
-    s1.age= 19;
+// int main(){
+//     students s1;
+//     s1.name= "Anuj";
+//     s1.age= 19;
 
-    cout << s1.name << " " << s1.age <<'\n';
-    return 0;
+//     cout << s1.name << " " << s1.age <<'\n';
+//     return 0;
+// }
+
+// int main(){
+//     int n;
+//     cout << "Enter the number of students: ";
+//     cin >> n;
+//     students s[n];
+
+//     for(int i=0;i<n;i++){
+//         cout << "Enter the name of student: ";
+//         getline(cin,s[i].name);
+//         cout << "Enter the age of student: ";
+//         cin >> s[i].age;
+//         cout << "Enter the class of student: ";
+//         cin >> s[i].std;
+//         cout << "Enter the address of student: ";
+//         getline(cin,s[i].address);
+//     }
+
+//     for(int i=0;i<10;i++){
+//         cout<< "Name: " << s[i].name << "Age: " << s[i].age << "Class: " << s[i].std << "Address: " << s[i].address << '\n';
+//     }
+//     return 0;
+// }
+
+void initialise(students *s,string name,int age){
+    s->name= name;
+    s->age= age;
+}
+
+int main(){
+    students s1,s2;
+    initialise(&s1,"Anuj",19);
+    initialise(&s2,"Anij",18);
+    cout << "{Name: " << s1.name << " Age: " << s1.age << "}\n";
+    cout << "{Name: " << s2.name << " Age: " << s2.age << "}\n";
 }
