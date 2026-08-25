@@ -48,13 +48,25 @@ using namespace std;
 //     return 0;
 // }
 
-int main(){
-    string str;
-    cout << "Enter a string: ";
-    getline(cin ,str);
-    for(int i=0;i<str.length();i++){
-        cout << str[i] << '\n';
-    }
+// int main(){
+//     string str;
+//     cout << "Enter a string: ";
+//     getline(cin ,str);
+//     for(int i=0;i<str.length();i++){
+//         cout << str[i] << '\n';
+//     }
+// }
 
-    
+struct students{
+    string name;
+    int age;
+};
+
+int main(){
+    students s1;
+    s1.name= "Anuj";
+    s1.age= 19;
+
+    cout << s1.name << " " << s1.age <<'\n';
+    return 0;
 }
