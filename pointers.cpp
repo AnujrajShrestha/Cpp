@@ -51,13 +51,66 @@ using namespace std;
 //     return 0;
 // }
 
-void swap(int *x, int *y){
-    *x= *x^*y^(*y=*x);
+// void swap(int *x, int *y){
+//     *x= *x^*y^(*y=*x);
+// }
+
+// int main(){
+//     int x= 10,y= 20;
+//     cout << "x= " << x << '\n' << "y= " << y << '\n';
+//     swap(&x,&y);
+//     cout << "x= " << x << '\n' << "y= " << y << '\n';
+//     return 0;
+// }
+
+// int* getAddress(int* x){
+//     return x;
+// }
+
+// int main(){
+//     int x= 20;
+//     int *ptr= getAddress(&x);
+//     cout << *ptr << '\n';
+//     return 0;
+// }
+
+int getMax(int* arr,int n){
+    int max=arr[0];
+    for(int i=0;i<n;i++){
+        if(max<arr[i]){
+            max= arr[i];
+        }
+    }
+    return max;
+}
+
+int getMin(int* arr,int n){
+    int min= arr[0];
+    for(int i=0;i<n;i++){
+        if(min>arr[i]){
+            min= arr[i];
+        }
+    }
+    return min;
+}
+
+void getMaxMin(int* arr, int n,int* max,int* min){
+     for(int i=0;i<n;i++){
+        if(*max<arr[i]){
+            *max= arr[i];
+        }else if(*min>arr[i]){
+            *min= arr[i];
+        }
+    }
 }
 
 int main(){
-    int x= 10,y= 20;
-    cout << "x= " << x << '\n' << "y= " << y << '\n';
-    swap(&x,&y);
-    cout << "x= " << x << '\n' << "y= " << y << '\n';
+    int arr[]= {1,2,3,4,5};
+    int n= sizeof(arr)/ sizeof(arr[0]);
+    int max= arr[0],min= arr[0];
+    cout << getMax(arr,n) << '\n';
+    cout << getMin(arr,n) << '\n';
+    getMaxMin(arr,n,&max,&min);
+    cout << "max: "<< max << ",Min: " << min << endl;
+    return 0;
 }
