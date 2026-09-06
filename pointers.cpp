@@ -14,12 +14,27 @@ using namespace std;
 // }
 
 //comparsion using pointers
+// int main(){
+//     int x= 10;
+//     int y= 10;
+//     int *ptr= &x;
+//     int *ptr2= &y;
+//     cout << (*ptr == *ptr2) << '\n'; //-> 1
+//     cout << (*ptr > *ptr2) << '\n'; // -> 0
+//     return 0;
+// }
+
 int main(){
-    int x= 10;
-    int y= 10;
+    int x= 20;
+    int arr[]= {1,2,3,4,5};
     int *ptr= &x;
-    int *ptr2= &y;
-    cout << (*ptr == *ptr2) << '\n'; //-> 1
-    cout << (*ptr > *ptr2) << '\n'; // -> 0
-    return 0;
+    int *ptr2= arr;
+    cout << (sizeof(x)) << '\n'; // ->4
+    cout << (sizeof(ptr)) << '\n';// ->8
+    cout << (sizeof(*ptr)) << '\n'; // ->4
+
+    cout << (sizeof(arr)) << '\n';// -> 20
+    cout << (sizeof(ptr2)) << '\n';// ->8
+    cout << (sizeof(*ptr2)) << '\n';// ->4
+
 }
