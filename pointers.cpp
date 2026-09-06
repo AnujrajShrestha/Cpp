@@ -24,17 +24,40 @@ using namespace std;
 //     return 0;
 // }
 
+// int main(){
+//     int x= 20;
+//     int arr[]= {1,2,3,4,5};
+//     int *ptr= &x;
+//     int *ptr2= arr;
+//     cout << (sizeof(x)) << '\n'; // ->4
+//     cout << (sizeof(ptr)) << '\n';// ->8
+//     cout << (sizeof(*ptr)) << '\n'; // ->4
+
+//     cout << (sizeof(arr)) << '\n';// -> 20
+//     cout << (sizeof(ptr2)) << '\n';// ->8
+//     cout << (sizeof(*ptr2)) << '\n';// ->4
+//     return 0;
+// }
+
+// void change(int *x){
+//     *x= 100;
+// }
+
+// int main(){
+//     int x= 20;
+//     cout << "Before calling :\n x= " << x << '\n';
+//     change(&x);
+//     cout << "After calling :\n x= " << x << '\n';
+//     return 0;
+// }
+
+void swap(int *x, int *y){
+    *x= *x^*y^(*y=*x);
+}
+
 int main(){
-    int x= 20;
-    int arr[]= {1,2,3,4,5};
-    int *ptr= &x;
-    int *ptr2= arr;
-    cout << (sizeof(x)) << '\n'; // ->4
-    cout << (sizeof(ptr)) << '\n';// ->8
-    cout << (sizeof(*ptr)) << '\n'; // ->4
-
-    cout << (sizeof(arr)) << '\n';// -> 20
-    cout << (sizeof(ptr2)) << '\n';// ->8
-    cout << (sizeof(*ptr2)) << '\n';// ->4
-
+    int x= 10,y= 20;
+    cout << "x= " << x << '\n' << "y= " << y << '\n';
+    swap(&x,&y);
+    cout << "x= " << x << '\n' << "y= " << y << '\n';
 }
