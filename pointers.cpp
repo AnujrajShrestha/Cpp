@@ -74,43 +74,58 @@ using namespace std;
 //     return 0;
 // }
 
-int getMax(int* arr,int n){
-    int max=arr[0];
-    for(int i=0;i<n;i++){
-        if(max<arr[i]){
-            max= arr[i];
-        }
-    }
-    return max;
-}
+// int getMax(int* arr,int n){
+//     int max=arr[0];
+//     for(int i=0;i<n;i++){
+//         if(max<arr[i]){
+//             max= arr[i];
+//         }
+//     }
+//     return max;
+// }
 
-int getMin(int* arr,int n){
-    int min= arr[0];
-    for(int i=0;i<n;i++){
-        if(min>arr[i]){
-            min= arr[i];
-        }
-    }
-    return min;
-}
+// int getMin(int* arr,int n){
+//     int min= arr[0];
+//     for(int i=0;i<n;i++){
+//         if(min>arr[i]){
+//             min= arr[i];
+//         }
+//     }
+//     return min;
+// }
 
-void getMaxMin(int* arr, int n,int* max,int* min){
-     for(int i=0;i<n;i++){
-        if(*max<arr[i]){
-            *max= arr[i];
-        }else if(*min>arr[i]){
-            *min= arr[i];
-        }
-    }
+// void getMaxMin(int* arr, int n,int* max,int* min){
+//      for(int i=0;i<n;i++){
+//         if(*max<arr[i]){
+//             *max= arr[i];
+//         }else if(*min>arr[i]){
+//             *min= arr[i];
+//         }
+//     }
+// }
+
+// int main(){
+//     int arr[]= {1,2,3,4,5};
+//     int n= sizeof(arr)/ sizeof(arr[0]);
+//     int max= arr[0],min= arr[0];
+//     cout << getMax(arr,n) << '\n';
+//     cout << getMin(arr,n) << '\n';
+//     getMaxMin(arr,n,&max,&min);
+//     cout << "max: "<< max << ",Min: " << min << endl;
+//     return 0;
+// }
+
+void getAddSubProAvg(int x,int y,int* add,int* subtract,int* product,int* avg){
+    *add= x+y;
+    *subtract= x-y;
+    *product= x*y;
+    *avg= (x+y)/2; 
 }
 
 int main(){
-    int arr[]= {1,2,3,4,5};
-    int n= sizeof(arr)/ sizeof(arr[0]);
-    int max= arr[0],min= arr[0];
-    cout << getMax(arr,n) << '\n';
-    cout << getMin(arr,n) << '\n';
-    getMaxMin(arr,n,&max,&min);
-    cout << "max: "<< max << ",Min: " << min << endl;
+    int a= 2,b= 3;
+    int add,subtract,product,avg= 0;
+    getAddSubProAvg(a,b,&add,&subtract,&product,&avg);
+    cout << "Add: " << add << ",Subtract: " << subtract << ",Product: " << product << ",Avg: " << avg << '\n';
     return 0;
 }
