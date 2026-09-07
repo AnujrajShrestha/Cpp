@@ -129,3 +129,18 @@ using namespace std;
 //     cout << "Add: " << add << ",Subtract: " << subtract << ",Product: " << product << ",Avg: " << avg << '\n';
 //     return 0;
 // }
+
+int main(){
+    int arr[]= {1,2,3,4,5};
+    int *ptr= arr;
+    int n= sizeof(arr)/sizeof(arr[0]);
+    
+    cout << arr[0] << '\n'; //-> 1
+    cout << arr << '\n'; //-> 0x1b437ffb20
+    cout << *ptr << '\n'; //-> 1
+    cout << ptr+1 << '\n';// -> 0x652c3ffc44
+    cout << ptr+2 << '\n';// -> 0x652c3ffc48
+    cout << arr[2] << '\n'; // -> 3
+    cout << *(ptr+2) << '\n'; // -> 3
+    return 0;
+}
