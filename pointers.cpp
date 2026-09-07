@@ -115,17 +115,17 @@ using namespace std;
 //     return 0;
 // }
 
-void getAddSubProAvg(int x,int y,int* add,int* subtract,int* product,int* avg){
-    *add= x+y;
-    *subtract= x-y;
-    *product= x*y;
-    *avg= (x+y)/2; 
-}
+// void getAddSubProAvg(int x,int y,int* add,int* subtract,int* product,int* avg){
+//     *add= x+y;
+//     *subtract= x-y;
+//     *product= x*y;
+//     *avg= (x+y)/2; 
+// }
 
-int main(){
-    int a= 2,b= 3;
-    int add,subtract,product,avg= 0;
-    getAddSubProAvg(a,b,&add,&subtract,&product,&avg);
-    cout << "Add: " << add << ",Subtract: " << subtract << ",Product: " << product << ",Avg: " << avg << '\n';
-    return 0;
-}
+// int main(){
+//     int a= 2,b= 3;
+//     int add,subtract,product,avg= 0;
+//     getAddSubProAvg(a,b,&add,&subtract,&product,&avg);
+//     cout << "Add: " << add << ",Subtract: " << subtract << ",Product: " << product << ",Avg: " << avg << '\n';
+//     return 0;
+// }
